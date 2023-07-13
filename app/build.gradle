@@ -48,4 +48,41 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    def navKTXVersion = '2.5.3'
+    implementation "androidx.navigation:navigation-fragment-ktx:$navKTXVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navKTXVersion"
+
+    // View Model + Lifecycle
+    def lifeCycleVersion = '2.2.0'
+    def lifeCycleKtxVersion = '2.6.1'
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifeCycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleKtxVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycleKtxVersion"
+
+    // Network
+    def retrofitVersion = '2.9.0'
+    def okHttpVersion = '4.10.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+
+    // Android KTX
+    def androidFragmentKTXVersion = '1.5.7'
+    implementation "androidx.fragment:fragment-ktx:$androidFragmentKTXVersion"
+
+    // Hilt
+    def hiltVersion = '2.44'
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-compiler:$hiltVersion"
+
+    // Paging
+    def pagingVersion = '3.1.1'
+    implementation "androidx.paging:paging-runtime-ktx:$pagingVersion"
+    implementation "androidx.paging:paging-common-ktx:$pagingVersion"
+
+    // Glide
+    def glideVersion = '4.15.1'
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
 }
