@@ -12,7 +12,7 @@
         layout="@layout/toolbar_home"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvAllNews"
+        android:id="@+id/rvTopHeadlinesNews"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginVertical="8dp"
@@ -30,8 +30,8 @@
         tools:visibility="visible"
         android:indeterminate="true"
         android:indeterminateTint="@color/matte_green_darker"
-        app:layout_constraintTop_toTopOf="@id/rvAllNews"
-        app:layout_constraintBottom_toBottomOf="@id/rvAllNews"
+        app:layout_constraintTop_toTopOf="@id/rvTopHeadlinesNews"
+        app:layout_constraintBottom_toBottomOf="@id/rvTopHeadlinesNews"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -44,7 +44,7 @@
         android:text="@string/tvResultCouldNotBeLoaded"
         android:visibility="gone"
         tools:visibility="visible"
-        app:layout_constraintTop_toTopOf="@id/rvAllNews"
+        app:layout_constraintTop_toTopOf="@id/rvTopHeadlinesNews"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
