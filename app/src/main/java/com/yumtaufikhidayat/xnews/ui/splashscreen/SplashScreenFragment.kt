@@ -1,5 +1,6 @@
 package com.yumtaufikhidayat.xnews.ui.splashscreen
 
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -32,15 +33,26 @@ class SplashScreenFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setSplashScreen()
+        setAppVersion()
     }
 
     private fun setSplashScreen() {
         lifecycleScope.launch {
             delay(2.seconds)
             findNavController().apply {
-                navigate(R.id.homeFragment)
                 popBackStack()
+                navigate(R.id.homeFragment)
             }
+        }
+    }
+
+    private fun setAppVersion() {
+        try {
+            val pInfo = activity?.packageManager?.getPackageInfo(activity?.packageName.toString(), 0)
+            val appVersion = pInfo?.versionName
+            binding.tvAppVersion.text = appVersion
+        } catch (e: PackageManager.NameNotFoundException) {
+            e.printStackTrace()
         }
     }
 
