@@ -14,7 +14,7 @@ Also, you can share the news to another platforms.
 ### Tech Stacks
 - Kotlin
 - ViewBinding
-- Dagger Hil
+- Dagger Hilt
 - Material Design
 - Glide
 - Retrofit
