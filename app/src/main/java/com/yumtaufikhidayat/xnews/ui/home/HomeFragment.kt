@@ -1,19 +1,19 @@
 package com.yumtaufikhidayat.xnews.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.yumtaufikhidayat.xnews.ui.LoadMoreAdapter
+import com.yumtaufikhidayat.xnews.R
 import com.yumtaufikhidayat.xnews.databinding.FragmentHomeBinding
-import com.yumtaufikhidayat.xnews.utils.navigateToDetail
+import com.yumtaufikhidayat.xnews.ui.LoadMoreAdapter
+import com.yumtaufikhidayat.xnews.ui.detail.DetailFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,7 +24,7 @@ class HomeFragment : Fragment() {
 
     private val homeViewModel by viewModels<HomeViewModel>()
     private val topHeadlinesNewsAdapter by lazy { TopHeadlinesNewsAdapter {
-        Log.i("onClick", "Data: $it")
+        navigateToDetail(it.url.orEmpty())
     } }
 
     override fun onCreateView(
@@ -84,6 +84,12 @@ class HomeFragment : Fragment() {
                 )
             }
         }
+    }
+
+    private fun navigateToDetail(newsUrl: String) {
+        val bundle = Bundle()
+        bundle.putString(DetailFragment.EXTRA_DATA, newsUrl)
+        findNavController().navigate(R.id.detailFragment, bundle)
     }
 
     override fun onDestroyView() {
