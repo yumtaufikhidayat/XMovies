@@ -7,4 +7,7 @@
     <string name="tvResultCouldNotBeLoaded">Result failed to load</string>
     <string name="tvResultsNotFound">Result not found</string>
     <string name="tvNewsDetail">News Detail</string>
+    <string name="tvShare">Share</string>
+    <string name="tvShareNews">Share news: \n%s</string>
+    <string name="tvShareWith">Share with</string>
 </resources>
