@@ -10,3 +10,18 @@ Also, you can share the news to another platforms.
 | <img src=newsdetail.jpeg  align="center" height="600" width="248" ></a> | <img src=sharenews.jpeg  align="center" height="600" width="248" ></a> |
 |:-----------------------------------------------------------------------:|:----------------------------------------------------------------------:|
 |                              *News Detail*                              |                              *Share News*                              |
+
+### Tech Stacks
+- Kotlin
+- ViewBinding
+- Dagger Hil
+- Material Design
+- Glide
+- Retrofit
+- OkHttp Interceptor
+- Coroutine
+- Flow
+- ViewModel & LiveData
+- Paging3
+- Navigation Component
+- MVVM Architecture with repository
