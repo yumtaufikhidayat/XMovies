@@ -2,16 +2,10 @@ package com.yumtaufikhidayat.xnews.utils
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.os.Bundle
 import android.widget.ImageView
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.yumtaufikhidayat.xnews.R
-import com.yumtaufikhidayat.xnews.model.Article
-import com.yumtaufikhidayat.xnews.ui.detail.DetailFragment
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -80,11 +74,4 @@ fun covertDateToTime(dataDate: String?): String? {
     }
 
     return convTime
-}
-
-fun Fragment.navigateToDetail(article: Article) {
-    val bundle = Bundle().apply {
-        putParcelable(DetailFragment.EXTRA_DATA, article)
-    }
-    findNavController().navigate(R.id.detailFragment, bundle)
 }
